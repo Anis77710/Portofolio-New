@@ -71,7 +71,6 @@
 @layer base {
   * {
     @apply border-border;
-    cursor: none;
   }
 
   html {
@@ -81,6 +80,13 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
+  }
+
+  /* Hide default cursor on desktop */
+  @media (min-width: 1024px) {
+    *, *::before, *::after {
+      cursor: none !important;
+    }
   }
 
   .font-mono {
