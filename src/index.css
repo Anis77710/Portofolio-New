@@ -71,6 +71,7 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none;
   }
 
   html {
@@ -97,15 +98,27 @@
 
   .glass-card-glow {
     @apply glass-card relative overflow-hidden;
+    --mouse-x: 50%;
+    --mouse-y: 50%;
   }
 
   .glass-card-glow::before {
     content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-500;
-    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), hsl(var(--primary) / 0.1), transparent 40%);
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none;
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), hsl(var(--primary) / 0.15), transparent 40%);
   }
 
   .glass-card-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  .glass-card-glow::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none;
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), hsl(var(--primary) / 0.06), transparent 40%);
+  }
+
+  .glass-card-glow:hover::after {
     @apply opacity-100;
   }
 
