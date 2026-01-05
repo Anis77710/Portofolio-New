@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { CustomCursor } from "@/components/CustomCursor";
 import { BackgroundGlow } from "@/components/BackgroundGlow";
 import { initGlowCards } from "@/components/GlowCard";
+import { BackgroundThemeProvider } from "@/contexts/BackgroundThemeContext";
 
 const Index = () => {
   useEffect(() => {
@@ -18,20 +19,22 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative cursor-none lg:cursor-none">
-      <CustomCursor />
-      <BackgroundGlow />
-      <Navbar />
-      <main className="relative z-10">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ServicesSection />
-        <PortfolioSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
+    <BackgroundThemeProvider>
+      <div className="min-h-screen bg-background relative cursor-none lg:cursor-none">
+        <CustomCursor />
+        <BackgroundGlow />
+        <Navbar />
+        <main className="relative z-10">
+          <HeroSection />
+          <AboutSection />
+          <SkillsSection />
+          <ServicesSection />
+          <PortfolioSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </BackgroundThemeProvider>
   );
 };
 
