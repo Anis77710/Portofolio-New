@@ -3,10 +3,10 @@ import { Moon, Sun, Waves, Flame } from "lucide-react";
 import { useBackgroundTheme, BackgroundTheme } from "@/contexts/BackgroundThemeContext";
 
 const themes: { id: BackgroundTheme; icon: React.ElementType; color: string; label: string }[] = [
-  { id: "midnight", icon: Moon, color: "hsl(174 100% 42%)", label: "Midnight" },
-  { id: "aurora", icon: Sun, color: "hsl(160 100% 50%)", label: "Aurora" },
-  { id: "sunset", icon: Flame, color: "hsl(25 100% 55%)", label: "Sunset" },
-  { id: "ocean", icon: Waves, color: "hsl(200 100% 50%)", label: "Ocean" },
+  { id: "midnight", icon: Moon, color: "hsl(174 100% 42%)", label: "Midnight (Cyan)" },
+  { id: "aurora", icon: Sun, color: "hsl(160 100% 45%)", label: "Aurora (Green)" },
+  { id: "sunset", icon: Flame, color: "hsl(25 100% 55%)", label: "Sunset (Orange)" },
+  { id: "ocean", icon: Waves, color: "hsl(200 100% 50%)", label: "Ocean (Blue)" },
 ];
 
 export const ThemeToggle = () => {
