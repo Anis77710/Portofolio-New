@@ -9,25 +9,25 @@ const themeConfigs: Record<BackgroundTheme, {
   particleCount: number;
 }> = {
   midnight: {
-    primary: "174 100% 42%",
+    primary: "var(--primary)",
     secondary: "280 80% 60%",
     accent: "220 90% 50%",
     particleCount: 30,
   },
   aurora: {
-    primary: "160 100% 50%",
+    primary: "var(--primary)",
     secondary: "280 100% 70%",
     accent: "200 100% 60%",
     particleCount: 50,
   },
   sunset: {
-    primary: "25 100% 55%",
+    primary: "var(--primary)",
     secondary: "340 100% 60%",
     accent: "45 100% 50%",
     particleCount: 40,
   },
   ocean: {
-    primary: "200 100% 50%",
+    primary: "var(--primary)",
     secondary: "180 100% 40%",
     accent: "240 80% 60%",
     particleCount: 35,
@@ -49,6 +49,12 @@ const FloatingParticle = ({
   const startX = Math.random() * 100;
   const startY = Math.random() * 100;
   
+  const colorOptions = [
+    "hsl(var(--primary) / 0.6)",
+    `hsl(${config.secondary} / 0.6)`,
+    `hsl(${config.accent} / 0.6)`,
+  ];
+  
   return (
     <motion.div
       className="absolute rounded-full"
@@ -57,8 +63,8 @@ const FloatingParticle = ({
         height: size,
         left: `${startX}%`,
         top: `${startY}%`,
-        background: `hsl(${index % 3 === 0 ? config.primary : index % 3 === 1 ? config.secondary : config.accent} / 0.6)`,
-        boxShadow: `0 0 ${size * 3}px hsl(${config.primary} / 0.4)`,
+        background: colorOptions[index % 3],
+        boxShadow: `0 0 ${size * 3}px hsl(var(--primary) / 0.4)`,
       }}
       animate={{
         y: [0, -30, 0, 30, 0],
@@ -111,13 +117,13 @@ export const BackgroundGlow = () => {
         className="absolute inset-0"
         animate={{
           background: [
-            `radial-gradient(ellipse 80% 50% at 20% 40%, hsl(${config.primary} / 0.15) 0%, transparent 50%),
+            `radial-gradient(ellipse 80% 50% at 20% 40%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
              radial-gradient(ellipse 60% 80% at 80% 20%, hsl(${config.secondary} / 0.1) 0%, transparent 50%),
              radial-gradient(ellipse 50% 50% at 50% 80%, hsl(${config.accent} / 0.08) 0%, transparent 50%)`,
-            `radial-gradient(ellipse 80% 50% at 30% 60%, hsl(${config.primary} / 0.15) 0%, transparent 50%),
+            `radial-gradient(ellipse 80% 50% at 30% 60%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
              radial-gradient(ellipse 60% 80% at 70% 30%, hsl(${config.secondary} / 0.1) 0%, transparent 50%),
              radial-gradient(ellipse 50% 50% at 40% 70%, hsl(${config.accent} / 0.08) 0%, transparent 50%)`,
-            `radial-gradient(ellipse 80% 50% at 20% 40%, hsl(${config.primary} / 0.15) 0%, transparent 50%),
+            `radial-gradient(ellipse 80% 50% at 20% 40%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
              radial-gradient(ellipse 60% 80% at 80% 20%, hsl(${config.secondary} / 0.1) 0%, transparent 50%),
              radial-gradient(ellipse 50% 50% at 50% 80%, hsl(${config.accent} / 0.08) 0%, transparent 50%)`,
           ],
@@ -133,8 +139,8 @@ export const BackgroundGlow = () => {
       <div 
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `linear-gradient(hsl(${config.primary} / 0.5) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(${config.primary} / 0.5) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.5) 1px, transparent 1px),
+                           linear-gradient(90deg, hsl(var(--primary) / 0.5) 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
         }}
       />
@@ -159,12 +165,12 @@ export const BackgroundGlow = () => {
           height: "800px",
           borderRadius: "50%",
           filter: "blur(40px)",
+          background: "radial-gradient(circle, hsl(var(--primary) / 0.12) 0%, hsl(var(--primary) / 0.05) 30%, transparent 60%)",
         }}
         animate={{
           x: mousePosition.x - 400,
           y: mousePosition.y - 400,
           opacity: isActive ? 1 : 0,
-          background: `radial-gradient(circle, hsl(${config.primary} / 0.12) 0%, hsl(${config.primary} / 0.05) 30%, transparent 60%)`,
         }}
         transition={{
           type: "spring",
@@ -182,12 +188,12 @@ export const BackgroundGlow = () => {
           height: "500px",
           borderRadius: "50%",
           filter: "blur(60px)",
+          background: `radial-gradient(circle, hsl(${config.secondary} / 0.08) 0%, transparent 60%)`,
         }}
         animate={{
           x: mousePosition.x - 250 + 150,
           y: mousePosition.y - 250 - 150,
           opacity: isActive ? 1 : 0,
-          background: `radial-gradient(circle, hsl(${config.secondary} / 0.08) 0%, transparent 60%)`,
         }}
         transition={{
           type: "spring",
@@ -202,7 +208,7 @@ export const BackgroundGlow = () => {
         <motion.path
           d="M0,50 Q250,0 500,50 T1000,50 T1500,50 T2000,50"
           fill="none"
-          stroke={`hsl(${config.primary})`}
+          stroke="hsl(var(--primary))"
           strokeWidth="1"
           animate={{
             d: [
@@ -232,7 +238,7 @@ export const BackgroundGlow = () => {
           ease: "easeInOut",
         }}
         style={{
-          background: `radial-gradient(circle, hsl(${config.primary} / 0.1) 0%, transparent 60%)`,
+          background: "radial-gradient(circle, hsl(var(--primary) / 0.1) 0%, transparent 60%)",
           filter: "blur(100px)",
         }}
       />
