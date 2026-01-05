@@ -16,13 +16,12 @@ const OrbitingParticle = ({
 }) => {
   return (
     <motion.div
-      className="fixed pointer-events-none z-[9999] hidden lg:block"
+      className="fixed pointer-events-none z-[9999] hidden lg:block bg-primary"
       style={{
         width: size,
         height: size,
-        background: "hsl(174 100% 50%)",
         borderRadius: "50%",
-        boxShadow: `0 0 ${size * 2}px hsl(174 100% 50% / 0.8), 0 0 ${size * 4}px hsl(174 100% 50% / 0.4)`,
+        boxShadow: `0 0 ${size * 2}px hsl(var(--primary) / 0.8), 0 0 ${size * 4}px hsl(var(--primary) / 0.4)`,
       }}
       animate={{
         x: [
@@ -130,7 +129,7 @@ export const CustomCursor = () => {
         style={{
           width: "500px",
           height: "500px",
-          background: "radial-gradient(circle, hsl(174 100% 42% / 0.08) 0%, hsl(174 100% 42% / 0.03) 30%, transparent 60%)",
+          background: "radial-gradient(circle, hsl(var(--primary) / 0.08) 0%, hsl(var(--primary) / 0.03) 30%, transparent 60%)",
           borderRadius: "50%",
         }}
         animate={{
@@ -151,7 +150,7 @@ export const CustomCursor = () => {
         style={{
           width: "120px",
           height: "120px",
-          background: "radial-gradient(circle, hsl(174 100% 42% / 0.15) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)",
           borderRadius: "50%",
         }}
         animate={{
@@ -173,7 +172,7 @@ export const CustomCursor = () => {
         style={{
           width: "60px",
           height: "60px",
-          border: "1px solid hsl(174 100% 42% / 0.2)",
+          border: "1px solid hsl(var(--primary) / 0.2)",
           borderRadius: "50%",
         }}
         animate={{
@@ -207,13 +206,12 @@ export const CustomCursor = () => {
 
       {/* Inner nucleus dot */}
       <motion.div
-        className="fixed pointer-events-none z-[9999] hidden lg:block"
+        className="fixed pointer-events-none z-[9999] hidden lg:block bg-primary"
         style={{
           width: "10px",
           height: "10px",
-          background: "hsl(174 100% 50%)",
           borderRadius: "50%",
-          boxShadow: "0 0 15px hsl(174 100% 50% / 0.9), 0 0 30px hsl(174 100% 50% / 0.5), 0 0 45px hsl(174 100% 50% / 0.3)",
+          boxShadow: "0 0 15px hsl(var(--primary) / 0.9), 0 0 30px hsl(var(--primary) / 0.5), 0 0 45px hsl(var(--primary) / 0.3)",
         }}
         animate={{
           x: mousePosition.x - 5,
