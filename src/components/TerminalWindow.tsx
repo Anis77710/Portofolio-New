@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const TerminalWindow = () => {
   const [displayedText, setDisplayedText] = useState("");
-  const fullCommand = "python automation.py";
+  const fullCommand = "npm run dev";
 
   useEffect(() => {
     let index = 0;
@@ -45,34 +45,36 @@ export const TerminalWindow = () => {
           className="space-y-2"
         >
           <div>
-            <span className="text-code-purple">class</span>
-            <span className="text-code-yellow"> Developer</span>
-            <span className="text-muted-foreground">:</span>
+            <span className="text-code-purple">const</span>
+            <span className="text-code-yellow"> developer</span>
+            <span className="text-muted-foreground"> = {"{"}</span>
           </div>
           <div className="pl-4">
             <span className="text-foreground">name</span>
-            <span className="text-muted-foreground"> = </span>
-            <span className="text-code-green">"MD Kawsar"</span>
+            <span className="text-muted-foreground">: </span>
+            <span className="text-code-green">"Anish Guragain"</span>
+            <span className="text-muted-foreground">,</span>
           </div>
           <div className="pl-4">
-            <span className="text-foreground">focus</span>
-            <span className="text-muted-foreground"> = </span>
+            <span className="text-foreground">stack</span>
+            <span className="text-muted-foreground">: </span>
             <span className="text-muted-foreground">[</span>
-            <span className="text-code-green">"Automation"</span>
+            <span className="text-code-green">"React"</span>
             <span className="text-muted-foreground">, </span>
-            <span className="text-code-green">"Data"</span>
+            <span className="text-code-green">"Tailwind"</span>
             <span className="text-muted-foreground">, </span>
-            <span className="text-code-green">"AI"</span>
+            <span className="text-code-green">"JS"</span>
             <span className="text-muted-foreground">]</span>
+            <span className="text-muted-foreground">,</span>
           </div>
           <div className="pl-4">
-            <span className="text-foreground">coffee</span>
-            <span className="text-muted-foreground"> = </span>
-            <span className="text-code-purple">float</span>
-            <span className="text-muted-foreground">(</span>
-            <span className="text-code-green">'inf'</span>
-            <span className="text-muted-foreground">)</span>
-            <span className="ml-2">☕</span>
+            <span className="text-foreground">passion</span>
+            <span className="text-muted-foreground">: </span>
+            <span className="text-code-purple">Infinity</span>
+            <span className="ml-2">🚀</span>
+          </div>
+          <div>
+            <span className="text-muted-foreground">{"}"}</span>
           </div>
         </motion.div>
       </div>

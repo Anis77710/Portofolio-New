@@ -46,11 +46,11 @@ export const ContactSection = () => {
           >
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-4">
-                Got a project?
+                Got a project idea?
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Whether you need a web scraper, automation system, or data pipeline - 
-                I'm here to help turn your ideas into reality.
+                Whether you need a stunning website, a responsive landing page, or 
+                a complete frontend application - I'm here to help bring your vision to life.
               </p>
             </div>
 
@@ -61,8 +61,8 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Email me at</p>
-                  <a href="mailto:kawsar@kawsarlog.com" className="text-foreground hover:text-primary transition-colors font-medium">
-                    kawsar@kawsarlog.com
+                  <a href="mailto:anish@example.com" className="text-foreground hover:text-primary transition-colors font-medium">
+                    anish@example.com
                   </a>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground mb-1">Based in</p>
-                  <p className="text-foreground font-medium">Dhaka, Bangladesh (Remote Worldwide)</p>
+                  <p className="text-foreground font-medium">Nepal (Remote Worldwide)</p>
                 </div>
               </div>
 
@@ -96,7 +96,7 @@ export const ContactSection = () => {
             viewport={{ once: true }}
             className="glass-card p-8 rounded-2xl"
           >
-            <p className="font-mono text-sm text-muted-foreground mb-6">connect.py</p>
+            <p className="font-mono text-sm text-muted-foreground mb-6">contact.jsx</p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
@@ -137,11 +137,11 @@ export const ContactSection = () => {
                   required
                 >
                   <option value="">Select a project type</option>
-                  <option value="web-scraping">Web Scraping</option>
-                  <option value="automation">Automation</option>
-                  <option value="api-development">API Development</option>
-                  <option value="data-analysis">Data Analysis</option>
-                  <option value="machine-learning">Machine Learning</option>
+                  <option value="website">Website</option>
+                  <option value="landing-page">Landing Page</option>
+                  <option value="web-app">Web Application</option>
+                  <option value="clone">Website Clone</option>
+                  <option value="redesign">Redesign</option>
                   <option value="other">Other</option>
                 </select>
               </div>

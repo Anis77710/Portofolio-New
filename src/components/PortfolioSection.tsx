@@ -2,58 +2,49 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    file: "project_1.py",
-    stat: "50K+ listings",
-    category: "API Development",
-    title: "Real Estate API Platform",
-    command: "api.get('/properties')",
-    description: "Complete REST API for property listings, agent management, and automated valuation models with ML-powered price predictions.",
-    tags: ["FastAPI", "PostgreSQL", "Redis"],
+    file: "coffee-website.jsx",
+    stat: "Responsive",
+    category: "Website",
+    title: "Coffee Shop Website",
+    command: "npm run brew",
+    description: "A beautifully designed coffee shop website with modern UI, smooth animations, and a cozy aesthetic that captures the essence of a premium coffee experience.",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
   },
   {
-    file: "project_2.py",
-    stat: "1M+ posts analyzed",
-    category: "Data Analytics",
-    title: "Social Media Analytics Dashboard",
-    command: "analyze_sentiment(posts)",
-    description: "Real-time sentiment analysis and engagement tracking across Twitter, Instagram, and LinkedIn with automated reporting.",
-    tags: ["Python", "Plotly", "NLP"],
+    file: "refokus-clone.jsx",
+    stat: "Pixel Perfect",
+    category: "Clone",
+    title: "Refokus.com Clone",
+    command: "npm run focus",
+    description: "A detailed recreation of the Refokus website showcasing advanced animations, scroll-based effects, and creative layout techniques.",
+    tags: ["React", "GSAP", "Tailwind"],
   },
   {
-    file: "project_3.py",
-    stat: "2M products tracked",
-    category: "Web Scraping",
-    title: "E-commerce Price Intelligence",
-    command: "scraper.crawl(urls)",
-    description: "Automated competitor price monitoring across 500+ retailers with dynamic pricing recommendations.",
-    tags: ["Scrapy", "MongoDB", "Celery"],
+    file: "gym-website.jsx",
+    stat: "Dynamic",
+    category: "Fitness",
+    title: "Gym & Fitness Website",
+    command: "npm run train",
+    description: "An energetic gym website featuring bold typography, dynamic layouts, and motivational design elements to inspire fitness enthusiasts.",
+    tags: ["React", "CSS3", "Responsive"],
   },
   {
-    file: "project_4.py",
-    stat: "10K+ hires facilitated",
-    category: "Automation",
-    title: "HR Recruitment Automation",
-    command: "match_candidates(job)",
-    description: "AI-powered resume screening, candidate matching, and interview scheduling system with LinkedIn integration.",
-    tags: ["Django", "OpenAI", "Selenium"],
+    file: "hoobank.jsx",
+    stat: "Modern UI",
+    category: "Fintech",
+    title: "HooBank - Banking Website",
+    command: "npm run bank",
+    description: "A modern banking landing page with sleek gradients, glass morphism effects, and professional design suitable for fintech applications.",
+    tags: ["React", "Tailwind CSS", "Vite"],
   },
   {
-    file: "project_5.py",
-    stat: "5M records/day",
-    category: "Data Engineering",
-    title: "Healthcare Data Pipeline",
-    command: "pipeline.run(batch)",
-    description: "HIPAA-compliant ETL system processing patient records, lab results, and insurance claims for analytics.",
-    tags: ["Airflow", "Spark", "AWS"],
-  },
-  {
-    file: "project_6.py",
-    stat: "100+ providers",
-    category: "API Development",
-    title: "Travel Booking Aggregator",
-    command: "await fetch_prices()",
-    description: "Multi-source flight and hotel comparison API aggregating prices from 100+ travel providers in real-time.",
-    tags: ["FastAPI", "AsyncIO", "GraphQL"],
+    file: "crowdfunding.jsx",
+    stat: "Interactive",
+    category: "Platform",
+    title: "Crowdfunding Platform",
+    command: "npm run fund",
+    description: "A crowdfunding platform interface with campaign cards, progress trackers, and user-friendly navigation for backers and creators.",
+    tags: ["React", "Tailwind", "Components"],
   },
 ];
 
@@ -68,12 +59,12 @@ export const PortfolioSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="section-heading">`from portfolio import *`</p>
+          <p className="section-heading">{`import { Projects } from './portfolio'`}</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Featured Projects
           </h2>
           <p className="text-muted-foreground font-mono text-sm">
-            # A collection of projects spanning automation, data engineering, and AI
+            // A showcase of my frontend development work
           </p>
         </motion.div>
 
@@ -107,7 +98,7 @@ export const PortfolioSection = () => {
 
                 {/* Command */}
                 <p className="font-mono text-sm text-muted-foreground mb-4">
-                  <span className="text-code-green">&gt;&gt;&gt; </span>
+                  <span className="text-code-green">&gt; </span>
                   <span className="text-foreground">{project.command}</span>
                 </p>
 
@@ -137,7 +128,7 @@ export const PortfolioSection = () => {
           className="text-center mt-12"
         >
           <p className="font-mono text-muted-foreground text-sm">
-            <span className="text-code-green"># </span>
+            <span className="text-code-green">// </span>
             More projects coming soon...
             <span className="typing-cursor ml-1">█</span>
           </p>

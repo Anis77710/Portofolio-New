@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Code2, Zap } from "lucide-react";
+import { ArrowRight, MapPin, Code2, Layout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TerminalWindow } from "./TerminalWindow";
 
-const skills = ["Python", "Scrapy", "Pandas", "Selenium", "Django", "TensorFlow"];
+const skills = ["React.js", "Tailwind CSS", "JavaScript", "TypeScript", "HTML5", "CSS3"];
 
 const stats = [
-  { icon: Code2, value: "1500+", label: "Projects" },
-  { icon: Zap, value: "950+", label: "Clients" },
+  { icon: Code2, value: "5+", label: "Projects" },
+  { icon: Layout, value: "100%", label: "Passion" },
 ];
 
 export const HeroSection = () => {
@@ -31,7 +31,7 @@ export const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-code-green animate-pulse" />
               <span className="text-sm text-muted-foreground">
-                Available for <span className="text-primary font-medium">freelance</span> work
+                Open to <span className="text-primary font-medium">opportunities</span>
               </span>
             </motion.div>
 
@@ -42,9 +42,9 @@ export const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              I'm MD Kawsar
+              I'm Anish Guragain
               <br />
-              <span className="text-gradient glow-text">Python</span> Developer
+              <span className="text-gradient glow-text">Frontend</span> Developer
             </motion.h1>
 
             {/* Description */}
@@ -54,9 +54,9 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto lg:mx-0"
             >
-              I transform complex data challenges into{" "}
-              <span className="text-foreground font-medium">elegant automation solutions</span>{" "}
-              that scale your business.
+              I craft{" "}
+              <span className="text-foreground font-medium">beautiful, responsive web experiences</span>{" "}
+              using React and modern CSS frameworks.
             </motion.p>
 
             {/* Location */}
@@ -67,7 +67,7 @@ export const HeroSection = () => {
               className="flex items-center justify-center lg:justify-start gap-2 text-sm text-muted-foreground mb-8"
             >
               <MapPin className="w-4 h-4 text-code-green" />
-              <span>Based in Dhaka, Bangladesh</span>
+              <span>Based in Nepal</span>
             </motion.div>
 
             {/* Skills */}
@@ -98,6 +98,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 glow-primary font-medium group"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Let's Talk
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -106,6 +107,7 @@ export const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="border-border hover:bg-secondary font-medium"
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Projects
               </Button>
@@ -148,8 +150,8 @@ export const HeroSection = () => {
               transition={{ delay: 0.8 }}
               className="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-lg"
             >
-              <p className="text-2xl font-bold text-primary">500+</p>
-              <p className="text-xs text-muted-foreground">Automations</p>
+              <p className="text-2xl font-bold text-primary">5+</p>
+              <p className="text-xs text-muted-foreground">Projects</p>
             </motion.div>
 
             <motion.div
@@ -158,8 +160,8 @@ export const HeroSection = () => {
               transition={{ delay: 1 }}
               className="absolute -bottom-4 -left-4 glass-card px-4 py-3 rounded-lg"
             >
-              <p className="text-2xl font-bold text-code-green">99.9%</p>
-              <p className="text-xs text-muted-foreground">Success Rate</p>
+              <p className="text-2xl font-bold text-code-green">React</p>
+              <p className="text-xs text-muted-foreground">Specialist</p>
             </motion.div>
           </motion.div>
         </div>

@@ -1,60 +1,60 @@
 import { motion } from "framer-motion";
-import { Bot, Database, BarChart3, Brain, Server, GitBranch } from "lucide-react";
+import { Layout, Palette, Smartphone, Zap, Code2, Layers } from "lucide-react";
 
 const services = [
   {
-    icon: Bot,
-    title: "Web Automation",
-    file: "web_automation.py",
-    func: "automate_task()",
-    description: "Automate repetitive tasks, form submissions, and data entry with Python scripts that run 24/7.",
-    returnVal: 'success=True',
-    tags: ["Selenium", "Puppeteer", "Playwright"],
+    icon: Layout,
+    title: "UI Development",
+    file: "ui-development.jsx",
+    func: "buildInterface()",
+    description: "Creating beautiful, intuitive user interfaces with React components that are reusable and maintainable.",
+    returnVal: "<Component />",
+    tags: ["React", "JSX", "Components"],
   },
   {
-    icon: Database,
-    title: "Data Scraping",
-    file: "data_scraping.py",
-    func: "scrape_data()",
-    description: "Extract valuable data from any website at scale. From e-commerce to social media, I handle it all.",
-    returnVal: '1M+ records',
-    tags: ["Scrapy", "BeautifulSoup", "APIs"],
+    icon: Palette,
+    title: "Responsive Styling",
+    file: "styling.css",
+    func: "applyStyles()",
+    description: "Crafting pixel-perfect designs using Tailwind CSS with modern utilities and custom configurations.",
+    returnVal: "styled ✓",
+    tags: ["Tailwind", "CSS3", "Flexbox"],
   },
   {
-    icon: BarChart3,
-    title: "Data Analysis",
-    file: "data_analysis.py",
-    func: "analyze()",
-    description: "Transform raw data into actionable insights with advanced analytics and visualization.",
-    returnVal: 'insights[]',
-    tags: ["Pandas", "NumPy", "Matplotlib"],
+    icon: Smartphone,
+    title: "Mobile-First Design",
+    file: "responsive.jsx",
+    func: "adaptLayout()",
+    description: "Building websites that look stunning on every device, from mobile phones to large desktop screens.",
+    returnVal: "responsive",
+    tags: ["Mobile", "Tablet", "Desktop"],
   },
   {
-    icon: Brain,
-    title: "Machine Learning",
-    file: "machine_learning.py",
-    func: "train_model()",
-    description: "Build predictive models and AI solutions to automate decision-making and find patterns.",
-    returnVal: 'accuracy=99%',
-    tags: ["TensorFlow", "Scikit-learn", "PyTorch"],
+    icon: Zap,
+    title: "Performance",
+    file: "optimize.js",
+    func: "boost()",
+    description: "Optimizing web applications for speed with lazy loading, code splitting, and best practices.",
+    returnVal: "fast ⚡",
+    tags: ["Optimization", "Speed", "UX"],
   },
   {
-    icon: Server,
-    title: "API Development",
-    file: "api_development.py",
-    func: "create_api()",
-    description: "Create robust REST APIs and backend services to power your applications.",
-    returnVal: 'status=200',
-    tags: ["Django", "Flask", "FastAPI"],
+    icon: Code2,
+    title: "Clean Code",
+    file: "code.js",
+    func: "writeClean()",
+    description: "Writing maintainable, readable code following best practices and modern JavaScript standards.",
+    returnVal: "readable",
+    tags: ["ES6+", "Best Practices", "DRY"],
   },
   {
-    icon: GitBranch,
-    title: "ETL Pipelines",
-    file: "etl_pipelines.py",
-    func: "run_pipeline()",
-    description: "Design and implement data pipelines that extract, transform, and load data efficiently.",
-    returnVal: 'complete ✓',
-    tags: ["Airflow", "Luigi", "dbt"],
+    icon: Layers,
+    title: "Component Design",
+    file: "components.jsx",
+    func: "compose()",
+    description: "Designing modular, reusable component systems that scale with your application needs.",
+    returnVal: "modular",
+    tags: ["Atomic Design", "Reusability", "Props"],
   },
 ];
 
@@ -69,12 +69,12 @@ export const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="section-heading">`class Services:`</p>
+          <p className="section-heading">{`const Services = () =>`}</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             What I Build
           </h2>
           <p className="text-muted-foreground font-mono text-sm">
-            # Turning complex problems into elegant solutions
+            // Turning designs into responsive, interactive experiences
           </p>
         </motion.div>
 
@@ -105,9 +105,8 @@ export const ServicesSection = () => {
 
                 {/* Function */}
                 <p className="font-mono text-sm text-code-purple mb-4">
-                  <span className="text-muted-foreground">`def </span>
+                  <span className="text-muted-foreground">{`const `}</span>
                   <span className="text-code-yellow">{service.func}</span>
-                  <span className="text-muted-foreground">`</span>
                 </p>
 
                 {/* Description */}

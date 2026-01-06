@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "Python", value: 95, command: "import automation as magic", category: "Language" },
-  { name: "Scrapy", value: 93, command: "scrapy crawl infinite_data", category: "Scraping" },
-  { name: "Selenium", value: 90, command: "driver.execute('dreams')", category: "Automation" },
-  { name: "Pandas", value: 92, command: "df.transform(chaos, order)", category: "Data" },
-  { name: "Django", value: 88, command: "views.deploy(production)", category: "Backend" },
-  { name: "TensorFlow", value: 85, command: "model.predict(future)", category: "ML/AI" },
-  { name: "PostgreSQL", value: 87, command: "SELECT * FROM success", category: "Database" },
-  { name: "APIs", value: 91, command: "REST.connect(everything)", category: "Integration" },
+  { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Framework" },
+  { name: "Tailwind CSS", value: 92, command: "className='flex items-center'", category: "Styling" },
+  { name: "JavaScript", value: 88, command: "const future = await build()", category: "Language" },
+  { name: "TypeScript", value: 80, command: "type Props = { magic: true }", category: "Language" },
+  { name: "HTML5", value: 95, command: "<div>semantic web</div>", category: "Markup" },
+  { name: "CSS3", value: 93, command: "animation: smooth infinite", category: "Styling" },
+  { name: "Git", value: 85, command: "git push origin main", category: "Tools" },
+  { name: "Responsive", value: 95, command: "@media (min-width: 768px)", category: "Design" },
 ];
 
 const stats = [
-  { value: "5+", label: "Languages" },
-  { value: "8+", label: "Frameworks" },
-  { value: "1500+", label: "Projects" },
-  { value: "5+ yrs", label: "Experience" },
+  { value: "5+", label: "Projects" },
+  { value: "6+", label: "Technologies" },
+  { value: "React", label: "Specialist" },
+  { value: "100%", label: "Dedication" },
 ];
 
 export const SkillsSection = () => {
@@ -29,11 +29,11 @@ export const SkillsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="section-heading">&lt;Tech Arsenal/&gt;</p>
+          <p className="section-heading">&lt;Tech Stack/&gt;</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            The tools and technologies I use to transform ideas into powerful automations
+            The tools and technologies I use to build modern web experiences
           </h2>
-          <p className="font-mono text-sm text-muted-foreground">skills.py — kawsarlog</p>
+          <p className="font-mono text-sm text-muted-foreground">skills.jsx — anish.dev</p>
         </motion.div>
 
         {/* Skills Grid */}
@@ -84,7 +84,7 @@ export const SkillsSection = () => {
             <span>npm run skill-check</span>
           </div>
           <p className="text-code-green mt-2">✓ All 8 skills loaded successfully</p>
-          <p className="text-muted-foreground">→ Ready to automate the impossible</p>
+          <p className="text-muted-foreground">→ Ready to build amazing interfaces</p>
         </motion.div>
 
         {/* Stats Row */}
