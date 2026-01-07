@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MapPin, Code2, Layout } from "lucide-react";
+import { ArrowRight, MapPin, Code2, Layout, Database, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TerminalWindow } from "./TerminalWindow";
 
-const skills = ["React.js", "Tailwind CSS", "JavaScript", "TypeScript", "HTML5", "CSS3"];
+const skills = [
+  { name: "React.js", icon: "⚛️" },
+  { name: "Tailwind CSS", icon: "🎨" },
+  { name: "JavaScript", icon: "📜" },
+  { name: "TypeScript", icon: "🔷" },
+  { name: "Backend", icon: "⚙️" },
+  { name: "Database", icon: "🗄️" },
+];
+
 
 const stats = [
   { icon: Code2, value: "5+", label: "Projects" },
@@ -79,11 +87,12 @@ export const HeroSection = () => {
             >
               {skills.map((skill, index) => (
                 <span
-                  key={skill}
-                  className="badge"
+                  key={skill.name}
+                  className="badge flex items-center gap-1.5"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {skill}
+                  <span className="text-primary">{skill.icon}</span>
+                  {skill.name}
                 </span>
               ))}
             </motion.div>
@@ -146,8 +155,19 @@ export const HeroSection = () => {
             {/* Floating Stats */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8 }}
+              animate={{ 
+                opacity: 1, 
+                scale: 1,
+                y: [0, -10, 0]
+              }}
+              transition={{ 
+                delay: 0.8,
+                y: {
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }
+              }}
               className="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-lg"
             >
               <p className="text-2xl font-bold text-primary">5+</p>
@@ -156,8 +176,19 @@ export const HeroSection = () => {
 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1 }}
+              animate={{ 
+                opacity: 1, 
+                scale: 1,
+                y: [0, -10, 0]
+              }}
+              transition={{ 
+                delay: 1,
+                y: {
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }
+              }}
               className="absolute -bottom-4 -left-4 glass-card px-4 py-3 rounded-lg"
             >
               <p className="text-2xl font-bold text-code-green">React</p>

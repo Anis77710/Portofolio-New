@@ -6,6 +6,7 @@ interface SkillCardProps {
     value: number;
     command: string;
     category: string;
+    icon?: string;
   };
   index: number;
 }
@@ -20,7 +21,14 @@ export const SkillCard = ({ skill, index }: SkillCardProps) => {
       className="glass-card-glow p-6 rounded-xl hover-lift group"
     >
       <div className="flex justify-between items-start mb-4">
-        <h3 className="font-semibold text-foreground">{skill.name}</h3>
+        <div className="flex items-center gap-2">
+          {skill.icon && (
+            <span className="text-xl" style={{ filter: "drop-shadow(0 0 4px hsl(var(--primary) / 0.5))" }}>
+              {skill.icon}
+            </span>
+          )}
+          <h3 className="font-semibold text-foreground">{skill.name}</h3>
+        </div>
         <span className="text-xl font-bold text-primary">{skill.value}%</span>
       </div>
       
