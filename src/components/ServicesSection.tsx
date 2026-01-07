@@ -56,6 +56,24 @@ const services = [
     returnVal: "modular",
     tags: ["Atomic Design", "Reusability", "Props"],
   },
+  {
+    icon: Code2,
+    title: "API Development",
+    file: "api.js",
+    func: "buildAPI()",
+    description: "Creating RESTful APIs with Node.js and Express to power web applications with robust backends.",
+    returnVal: "endpoints",
+    tags: ["REST", "Node.js", "Express"],
+  },
+  {
+    icon: Layout,
+    title: "Database Design",
+    file: "database.js",
+    func: "queryDB()",
+    description: "Designing efficient database schemas and queries with MongoDB for scalable data management.",
+    returnVal: "data ✓",
+    tags: ["MongoDB", "NoSQL", "CRUD"],
+  },
 ];
 
 export const ServicesSection = () => {
