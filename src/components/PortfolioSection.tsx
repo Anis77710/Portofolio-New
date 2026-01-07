@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
@@ -9,6 +10,8 @@ const projects = [
     command: "npm run brew",
     description: "A beautifully designed coffee shop website with modern UI, smooth animations, and a cozy aesthetic that captures the essence of a premium coffee experience.",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://coffee-shop-demo.vercel.app",
+    githubUrl: "https://github.com/anishguragain/coffee-website",
   },
   {
     file: "refokus-clone.jsx",
@@ -18,6 +21,8 @@ const projects = [
     command: "npm run focus",
     description: "A detailed recreation of the Refokus website showcasing advanced animations, scroll-based effects, and creative layout techniques.",
     tags: ["React", "GSAP", "Tailwind"],
+    liveUrl: "https://refokus-clone-demo.vercel.app",
+    githubUrl: "https://github.com/anishguragain/refokus-clone",
   },
   {
     file: "gym-website.jsx",
@@ -27,6 +32,8 @@ const projects = [
     command: "npm run train",
     description: "An energetic gym website featuring bold typography, dynamic layouts, and motivational design elements to inspire fitness enthusiasts.",
     tags: ["React", "CSS3", "Responsive"],
+    liveUrl: "https://gym-website-demo.vercel.app",
+    githubUrl: "https://github.com/anishguragain/gym-website",
   },
   {
     file: "hoobank.jsx",
@@ -36,6 +43,8 @@ const projects = [
     command: "npm run bank",
     description: "A modern banking landing page with sleek gradients, glass morphism effects, and professional design suitable for fintech applications.",
     tags: ["React", "Tailwind CSS", "Vite"],
+    liveUrl: "https://hoobank-demo.vercel.app",
+    githubUrl: "https://github.com/anishguragain/hoobank",
   },
   {
     file: "crowdfunding.jsx",
@@ -45,6 +54,8 @@ const projects = [
     command: "npm run fund",
     description: "A crowdfunding platform interface with campaign cards, progress trackers, and user-friendly navigation for backers and creators.",
     tags: ["React", "Tailwind", "Components"],
+    liveUrl: "https://crowdfunding-demo.vercel.app",
+    githubUrl: "https://github.com/anishguragain/crowdfunding",
   },
 ];
 
@@ -108,12 +119,34 @@ export const PortfolioSection = () => {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span key={tag} className="badge text-xs">
                       {tag}
                     </span>
                   ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex gap-3 pt-4 border-t border-border/50">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    <ExternalLink size={14} />
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-muted text-foreground rounded-lg text-sm font-medium hover:bg-muted/80 transition-colors"
+                  >
+                    <Github size={14} />
+                    Code
+                  </a>
                 </div>
               </div>
             </motion.div>
