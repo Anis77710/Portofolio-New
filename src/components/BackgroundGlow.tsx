@@ -1,3 +1,4 @@
+// Background glow effect with theme support
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useBackgroundTheme, BackgroundTheme } from "@/contexts/BackgroundThemeContext";

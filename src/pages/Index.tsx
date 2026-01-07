@@ -1,3 +1,4 @@
+// Main portfolio page
 import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
