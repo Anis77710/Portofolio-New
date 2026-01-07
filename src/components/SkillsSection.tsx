@@ -1,25 +1,26 @@
 import { motion } from "framer-motion";
 import { SkillCard } from "@/components/SkillCard";
+import { Database, Server, Code, FileJson, Palette, GitBranch, Smartphone, PenTool } from "lucide-react";
 
 const frontendSkills = [
-  { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Frontend" },
-  { name: "Tailwind CSS", value: 92, command: "className='flex items-center'", category: "Frontend" },
-  { name: "JavaScript", value: 88, command: "const future = await build()", category: "Language" },
-  { name: "TypeScript", value: 80, command: "type Props = { magic: true }", category: "Language" },
+  { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Frontend", icon: "⚛️" },
+  { name: "Tailwind CSS", value: 92, command: "className='flex items-center'", category: "Frontend", icon: "🎨" },
+  { name: "JavaScript", value: 88, command: "const future = await build()", category: "Language", icon: "📜" },
+  { name: "TypeScript", value: 80, command: "type Props = { magic: true }", category: "Language", icon: "🔷" },
 ];
 
 const backendSkills = [
-  { name: "Node.js", value: 75, command: "node server.js --production", category: "Backend" },
-  { name: "Express.js", value: 72, command: "app.listen(3000)", category: "Backend" },
-  { name: "MongoDB", value: 70, command: "db.collection.find({})", category: "Database" },
-  { name: "REST APIs", value: 78, command: "GET /api/users/:id", category: "Backend" },
+  { name: "Node.js", value: 75, command: "node server.js --production", category: "Backend", icon: "🟢" },
+  { name: "Express.js", value: 72, command: "app.listen(3000)", category: "Backend", icon: "⚡" },
+  { name: "MongoDB", value: 70, command: "db.collection.find({})", category: "Database", icon: "🍃" },
+  { name: "REST APIs", value: 78, command: "GET /api/users/:id", category: "Backend", icon: "🔌" },
 ];
 
 const otherSkills = [
-  { name: "Git & GitHub", value: 85, command: "git push origin main", category: "Tools" },
-  { name: "Responsive Design", value: 95, command: "@media (min-width: 768px)", category: "Design" },
-  { name: "HTML5 & CSS3", value: 93, command: "<section>semantic</section>", category: "Markup" },
-  { name: "Figma", value: 65, command: "Design → Code", category: "Design" },
+  { name: "Git & GitHub", value: 85, command: "git push origin main", category: "Tools", icon: "🔀" },
+  { name: "Responsive Design", value: 95, command: "@media (min-width: 768px)", category: "Design", icon: "📱" },
+  { name: "Backend", value: 75, command: "server.run()", category: "Backend", icon: "⚙️" },
+  { name: "Database", value: 70, command: "SELECT * FROM skills", category: "Database", icon: "🗄️" },
 ];
 
 const stats = [

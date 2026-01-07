@@ -17,7 +17,7 @@ const CV = () => {
           </Link>
           <button
             onClick={handleDownload}
-            className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-background border border-primary text-primary rounded-lg text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             <Download size={16} />
             Download CV
@@ -77,7 +77,7 @@ const CV = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["React.js", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "HTML5", "CSS3", "Framer Motion", "GSAP"].map((skill) => (
+                  {["React.js", "JavaScript (ES6+)", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"].map((skill) => (
                     <span key={skill} className="badge-primary badge text-xs">{skill}</span>
                   ))}
                 </div>
@@ -85,7 +85,7 @@ const CV = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Backend & Tools</h3>
                 <div className="flex flex-wrap gap-2">
-                  {["Node.js", "Express.js", "MongoDB", "REST APIs", "Git", "GitHub", "VS Code", "Figma"].map((skill) => (
+                  {["Node.js", "Express.js", "MongoDB", "REST APIs", "Backend", "Database", "Git", "GitHub"].map((skill) => (
                     <span key={skill} className="badge text-xs">{skill}</span>
                   ))}
                 </div>
