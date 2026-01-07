@@ -1,14 +1,25 @@
 import { motion } from "framer-motion";
+import { SkillCard } from "./SkillCard";
 
-const skills = [
-  { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Framework" },
-  { name: "Tailwind CSS", value: 92, command: "className='flex items-center'", category: "Styling" },
+const frontendSkills = [
+  { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Frontend" },
+  { name: "Tailwind CSS", value: 92, command: "className='flex items-center'", category: "Frontend" },
   { name: "JavaScript", value: 88, command: "const future = await build()", category: "Language" },
   { name: "TypeScript", value: 80, command: "type Props = { magic: true }", category: "Language" },
-  { name: "HTML5", value: 95, command: "<div>semantic web</div>", category: "Markup" },
-  { name: "CSS3", value: 93, command: "animation: smooth infinite", category: "Styling" },
-  { name: "Git", value: 85, command: "git push origin main", category: "Tools" },
-  { name: "Responsive", value: 95, command: "@media (min-width: 768px)", category: "Design" },
+];
+
+const backendSkills = [
+  { name: "Node.js", value: 75, command: "node server.js --production", category: "Backend" },
+  { name: "Express.js", value: 72, command: "app.listen(3000)", category: "Backend" },
+  { name: "MongoDB", value: 70, command: "db.collection.find({})", category: "Database" },
+  { name: "REST APIs", value: 78, command: "GET /api/users/:id", category: "Backend" },
+];
+
+const otherSkills = [
+  { name: "Git & GitHub", value: 85, command: "git push origin main", category: "Tools" },
+  { name: "Responsive Design", value: 95, command: "@media (min-width: 768px)", category: "Design" },
+  { name: "HTML5 & CSS3", value: 93, command: "<section>semantic</section>", category: "Markup" },
+  { name: "Figma", value: 65, command: "Design → Code", category: "Design" },
 ];
 
 const stats = [
@@ -36,39 +47,33 @@ export const SkillsSection = () => {
           <p className="font-mono text-sm text-muted-foreground">skills.jsx — anish.dev</p>
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Frontend Skills */}
+        <h3 className="text-xl font-semibold text-foreground mb-4 font-mono">
+          <span className="text-primary">&lt;</span>Frontend<span className="text-primary">/&gt;</span>
+        </h3>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {frontendSkills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} index={index} />
+          ))}
+        </div>
+
+        {/* Backend Skills */}
+        <h3 className="text-xl font-semibold text-foreground mb-4 font-mono">
+          <span className="text-primary">&lt;</span>Backend<span className="text-primary">/&gt;</span>
+        </h3>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {backendSkills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} index={index} />
+          ))}
+        </div>
+
+        {/* Other Skills */}
+        <h3 className="text-xl font-semibold text-foreground mb-4 font-mono">
+          <span className="text-primary">&lt;</span>Tools & Design<span className="text-primary">/&gt;</span>
+        </h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          {skills.map((skill, index) => (
-            <motion.div
-              key={skill.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="glass-card-glow p-6 rounded-xl hover-lift group"
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="font-semibold text-foreground">{skill.name}</h3>
-                <span className="text-xl font-bold text-primary">{skill.value}%</span>
-              </div>
-              
-              <p className="font-mono text-xs text-muted-foreground mb-4">
-                <span className="text-code-green">$ </span>
-                {skill.command}
-              </p>
-
-              <div className="skill-bar mb-3">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.value}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
-                  className="skill-bar-fill"
-                />
-              </div>
-
-              <span className="badge-primary badge">{skill.category}</span>
-            </motion.div>
+          {otherSkills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} index={index} />
           ))}
         </div>
 
@@ -83,8 +88,8 @@ export const SkillsSection = () => {
             <span className="text-code-green">$</span>
             <span>npm run skill-check</span>
           </div>
-          <p className="text-code-green mt-2">✓ All 8 skills loaded successfully</p>
-          <p className="text-muted-foreground">→ Ready to build amazing interfaces</p>
+          <p className="text-code-green mt-2">✓ All 12 skills loaded successfully</p>
+          <p className="text-muted-foreground">→ Full-stack ready: Frontend + Backend</p>
         </motion.div>
 
         {/* Stats Row */}
