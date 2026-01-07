@@ -10,6 +10,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { CustomCursor } from "@/components/CustomCursor";
 import { BackgroundGlow } from "@/components/BackgroundGlow";
+import { SplashCursor } from "@/components/SplashCursor";
 import { initGlowCards } from "@/components/GlowCard";
 import { BackgroundThemeProvider } from "@/contexts/BackgroundThemeContext";
 
@@ -22,6 +23,7 @@ const Index = () => {
   return (
     <BackgroundThemeProvider>
       <div className="min-h-screen bg-background relative cursor-none lg:cursor-none">
+        <SplashCursor />
         <CustomCursor />
         <BackgroundGlow />
         <Navbar />
