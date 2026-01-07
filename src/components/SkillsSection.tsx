@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SkillCard } from "./SkillCard";
+import { SkillCard } from "@/components/SkillCard";
 
 const frontendSkills = [
   { name: "React.js", value: 90, command: "npx create-react-app awesome", category: "Frontend" },
