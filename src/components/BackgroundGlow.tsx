@@ -28,8 +28,8 @@ const themeConfigs: Record<BackgroundTheme, {
   },
   ocean: {
     primary: "var(--primary)",
-    secondary: "180 100% 40%",
-    accent: "240 80% 60%",
+    secondary: "280 100% 60%",
+    accent: "300 80% 65%",
     particleCount: 35,
   },
 };

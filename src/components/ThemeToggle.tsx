@@ -6,7 +6,7 @@ const themes: { id: BackgroundTheme; icon: React.ElementType; color: string; lab
   { id: "midnight", icon: Moon, color: "hsl(174 100% 42%)", label: "Midnight (Cyan)" },
   { id: "aurora", icon: Sun, color: "hsl(160 100% 45%)", label: "Aurora (Green)" },
   { id: "sunset", icon: Flame, color: "hsl(25 100% 55%)", label: "Sunset (Orange)" },
-  { id: "ocean", icon: Waves, color: "hsl(200 100% 50%)", label: "Ocean (Blue)" },
+  { id: "ocean", icon: Waves, color: "hsl(270 100% 60%)", label: "Ocean (Purple)" },
 ];
 
 export const ThemeToggle = () => {

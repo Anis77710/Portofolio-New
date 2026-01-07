@@ -40,7 +40,7 @@ export const SkillsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="section-heading">&lt;Tech Stack/&gt;</p>
+          <p className="section-heading">&lt;Tech Arsenal/&gt;</p>
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             The tools and technologies I use to build modern web experiences
           </h2>
